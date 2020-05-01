@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80f3cb30b3.js"></script>
+    <!-- font gg -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="owl.carousel.min.css">
+</head>
+<body>
+    <header>
+        <div class="containerHead">
+            <div class="contact">
+                <p>Monday - Sunday / 08:00AM - 07:00PM</p>
+                <a class="makeReser" href="#">Make Reservation 26/4 Day 4</a>
+                <div class="medialSocial">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="navHiden" id="navHiden">
+                <div class="logo">Trung Royal</div>
+                <label for="menuHiden" class="menuBtn"   >
+                    <div class="btnHambuger"></div>
+                </label>
+            </div>
+            <input type="checkbox" name="menuHiden" id="menuHiden">
+            <div class="menuBar">
+                <div class="logo">Trung Royal</div>
+                <!-- Menu Hambuger -->
+                <div class="menu">
+                    <a class="active" href="#">home</a>
+                    <a href="#dailyDeal">daily deal</a>
+                    <a href="#about">about</a>
+                    <a href="#">menu</a>
+                    <a href="#">event</a>
+                    <a href="#">contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="home">
+            <div class="container">
+                <div class="containerHome">
+                    
+                    <div class="contentHome" >
+                        <div class="title">It tastes as good as it looks!</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto pariatur fugiat quisquam nostrum obcaecati ipsum veniam officiis error tempora minima eius, eligendi, ex voluptatem nam nesciunt ut, accusantium commodi voluptas?</p>
+                        <h3>Coffee, tea, cake, ice cream,  desert & more...</h3>
+                        <button  class="btnBox btn"><a href="#">Check out our menu!</a></button>
+                    </div>
+                    <div class="imgBox">
+                        <img src="IMG/28.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="dailyDeal" id="dailyDeal">
+            <div class="container">
+                <div class="containerDeal">
+                    <h1>Today's deal</h1>
+                    <div class="icon">
+                        <div class="iconBox">
+                            <i class="fas fa-mug-hot"></i>
+                            <span>Coffee</span>
+                        </div>
+                        <i class="fas fa-plus"></i>
+                        <div class="iconBox">
+                            <i class="fas fa-ice-cream"></i>
+                            <span>Ice cream</span>
+                        </div>
+                        <i class="fas fa-plus"></i>
+                        <div class="iconBox">
+                            <i class="fas fa-cocktail"></i>
+                            <span>Cocktails</span>
+                        </div>
+                    </div>
+
+                    <h1>Experience our yummie cocktails</h1>
+                    <div class="content">
+                        <div class="imgBox">
+                            <img src="IMG/8.jpg" alt="">
+                        </div>
+                        <div class="imgBox">
+                            <img src="IMG/5.jpg" alt="">
+                        </div>
+                        <div class="imgBox">
+                            <img src="IMG/12.jpg" alt="">
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae voluptas dicta, odio animi at pariatur ipsa. Minima omnis, nostrum ullam totam non ratione reprehenderit iste nihil officiis cumque quam voluptatem.  Minima omnis, nostrum ullam totam non ratione reprehenderit iste nihil officiis cumque quam voluptatem.</p>
+                    <a class="link"  href="#">10% OFF! Taste them all now!</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="aboutCafe" id="about">
+            <!-- <div class="container"> -->
+                <div class="containerAbout">
+                    <h1>About our cafe</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, iusto veritatis voluptatum maiores suscipit libero amet ad doloribus eum ipsum excepturi inventore exercitationem reprehenderit omnis praesentium rerum sequi velit eius!Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="imgBox owl-carousel ">
+                        <div class="box">
+                            <img src="IMG/c1.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img src="IMG/c2.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img src="IMG/c3.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img src="IMG/c4.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img src="IMG/c5.jpg" alt="">
+                        </div>
+                        <div class="box">
+                            <img src="IMG/c6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h2>We are araganizing all kinds of events, from private parties to birthday or anniversaries.</h2>
+                    <button  class="btnBox btn link"><a href="#">Contact us for more details and reservations!</a></button>
+                </div>
+            <!-- </div> -->
+        </div>
+    </main>
+
+
+
+    
+    <script>
+        $(".owl-carousel").owlCarousel({
+          margin:20 ,
+          nav:true,
+          loop:true,
+          autoplay:true,
+          autoplayTimeout:2000,
+          autoplayHoverPause:true,
+          responsive:{
+            0:{
+              items:1
+            },
+            500:{
+              items:2
+            },
+            800:{
+              items:3
+            },
+            1000:{
+              items:4
+            }
+          }
+        });
+        
+      </script>
+    <!-- Thư viện Jquery -->
+    <!-- Thư viện Jquery -->
+</body>
+<script src="main.js"></script>
+</html>

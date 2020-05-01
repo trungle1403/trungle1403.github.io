@@ -1,0 +1,737 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Lobster', cursive; */
+}
+
+header
+{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(IMG/bg.jpeg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+a 
+{
+    text-decoration: none;
+}
+h1 
+{
+    font-size: 26px;
+}
+.container
+{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+.btnBox a 
+{
+    padding: 5px 15px;
+    color:  white;
+    position: relative;
+    display: block;
+}
+.btnBox
+{
+    font-weight: 800;
+    outline: none !important;
+    background: none;
+    text-transform: uppercase;
+    border: 2px solid salmon ;
+    cursor: pointer;
+    transition: color .4s linear;
+    position: relative;
+}
+.btnBox::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: salmon ;
+    transition: .5s;
+    /* transform-origin: 0;  */
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+ .btn::before
+{
+    transform: scaleX(1);
+}
+.btn:hover::before
+{
+    transform: scaleX(0);
+
+} 
+/* Menu------------------------------------------------------------- */
+
+.containerHead .contact
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #EAB543;
+    color: white;
+    align-items: center;
+}
+.containerHead .contact a 
+{
+    background-color: teal;
+    padding: 5px 10px;
+    color: white;
+    margin: 5px 0;
+    transition: .5s ease;
+    border-radius: 5px;
+    border:1px solid  teal;
+}
+.containerHead .contact a:hover
+{
+    color: teal;
+    background-color: rgb(238, 243, 184);
+}
+.containerHead .contact i 
+{
+    font-size: 15px;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+.containerHead .contact i:hover
+{
+    color: teal;
+}
+.menuBar
+{
+    background-color: #2c2d30;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition:left  .8s ease-in-out;
+    z-index: 999;
+    height: 60px;
+    top: 0;
+    position: sticky;
+}
+.logo
+{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    display: block;
+    background:linear-gradient(#ffb142,rgba(40, 46, 8, 0.7));
+    padding: 0 10px;
+    margin: 10px 0;
+    color:  #33d9b2;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* Menu------------------------------------------------ */
+.navHiden 
+{
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    display: none;
+    background-color: #3c6382;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 999;
+    transition: .5s ease-in-out;
+}
+
+.menuBtn 
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition:transform .3s ease;
+}
+.menuBtn .btnHambuger
+{
+    width: 30px;
+    margin: auto;
+    height: 4px;
+    border-radius: 3px;
+    transition:  .3s ease;
+    background-color: white;
+}
+.menuBtn .btnHambuger::before,
+.menuBtn .btnHambuger::after
+{
+    position: absolute;
+    content: '';
+    width: 30px;
+    margin: auto;
+    height: 4px;
+    transition: all .3s ease;
+    border-radius: 3px;
+    background-color: white;
+}
+.menuBtn .btnHambuger::before
+{
+    width: 17px;
+    transform: translateY(-10px);
+}
+.menuBtn .btnHambuger::after
+{
+    width: 17px;
+    transform: translateY(10px);
+    right: 0;
+}
+/* Open menu */
+.menuBtn.openmenu .btnHambuger::before
+{
+    transform: rotate(80deg) translate(-5.8px,-6.5px);
+}
+.menuBtn.openmenu .btnHambuger::after
+{
+    transform: rotate(80deg) translate(5.8px,6.5px);
+}
+.menuBtn.openmenu .btnHambuger
+{
+    transform: rotate(-40deg);
+}
+
+ #menuHiden
+{
+    visibility: hidden;
+    display: none;
+}
+ .menuBtn 
+{
+    visibility: hidden;
+    opacity: 0;
+    /* display: none; */
+}
+
+/* menu hiden end--------------------------------------------- */
+.menu 
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.menu a 
+{
+    font-family: 'Lobster', cursive;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 12px;
+    padding: 0 7px;
+    text-transform: uppercase;
+    line-height: 50px;
+    transition: .5s ease-out;
+    position: relative;
+}
+.menu a.active
+{
+    color:#45aaf2;
+}
+
+.menu a:hover
+{
+    color: #45aaf2;
+    transform: scale(1.3);
+}
+.menu a::before
+{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 4px;
+    height: 2px;
+    background-color: rgb(16, 177, 231);
+    width: 0;
+    transition: ease .6s;
+}
+.menu a:hover::before
+{
+    width: 85%;
+}
+
+
+/* Menu End------------------------------------------------------------- */
+/* Home------------------------------------------------------------------ */
+.home
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    min-height: 80vh;
+}
+.home .containerHome
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+}
+.home .containerHome .imgBox
+{
+    flex: 1;
+}
+.home .containerHome .imgBox img 
+{
+    border-radius:100px;
+    width: 200px;
+    height: 200px;
+
+}
+.home .containerHome .contentHome
+{
+    flex:2;
+    text-align: left;
+    margin-left: 65px;
+}
+.home .containerHome .contentHome .title
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: sandybrown;
+}
+.home .containerHome .contentHome p
+{
+    font-family: serif;
+    margin: 15px 0;
+}
+.home .containerHome .contentHome h3 
+{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-family: 'Lobster', cursive;
+}
+/* .home .containerHome .contentHome a 
+{
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    display: block;
+} */
+
+
+/* Home End------------------------------------------------------------- */
+
+/* Daily Deal------------------------------------------------------------- */
+
+.dailyDeal
+{
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(35deg,wheat,rgb(238, 240, 113));
+}
+.containerDeal h1 
+{   
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: tomato;
+    word-spacing: 5px;
+    font-size: 26px;
+}
+.containerDeal h1::before
+{
+    content: '';
+    top: -4px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    background-color: tomato;
+    
+}
+.containerDeal h1::after
+{
+    content: '';
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -20px;
+    position: absolute;
+    width: 50px;
+    border-bottom: 10px dotted teal; 
+}
+
+
+.dailyDeal .containerDeal .icon 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.dailyDeal .containerDeal .icon .iconBox 
+{
+    background-color: teal;
+    padding: 8px 14px;
+    border-radius: 7px;
+}
+.dailyDeal .containerDeal .icon .iconBox span 
+{
+    margin-left: 5px;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+.dailyDeal .containerDeal .icon .iconBox i
+{
+    color: white;
+    font-size: 20px;
+}
+.dailyDeal .containerDeal i 
+{
+    color: teal;
+    font-size: 20px;
+}
+.dailyDeal .containerDeal .content
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dailyDeal .containerDeal .content .imgBox 
+{
+    width: 220px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 20px 20px;
+}
+.dailyDeal .containerDeal .content .imgBox img
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.dailyDeal .containerDeal .content .imgBox img:hover
+{
+    transform: scale(1.2);
+}
+.dailyDeal .containerDeal p 
+{
+    text-align: center;
+    margin: 5px auto;
+    width:80%;
+    font-size: 17px;
+    /* font-family: 'Dancing Script', cursive; */
+}
+
+.dailyDeal .containerDeal  .link
+{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: tomato;
+    color: wheat;
+    max-width: 320px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+/* Daily Deal End------------------------------------------------------------- */
+
+/* about------------------------------------------------------------------- */
+.aboutCafe
+{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(IMG/bg1.jpeg) ;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.aboutCafe h1 
+{   
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: sienna;
+    word-spacing: 5px;
+}
+.aboutCafe h1::before
+{
+    content: '';
+    top: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    background-color: sienna;
+}
+.aboutCafe h1::after
+{
+    content: '';
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -20px;
+    position: absolute;
+    width: 50px;
+    border-bottom: 10px dotted teal; 
+}
+.aboutCafe .containerAbout 
+{
+    overflow: hidden;
+    margin: auto;
+    padding: 20px 0;
+    width: 1200px;
+    text-align: center;
+}
+.aboutCafe .containerAbout p
+{
+    color: white;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 17px;
+    margin: 30px auto 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.aboutCafe .imgBox
+{
+    max-width: 900px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.aboutCafe .containerAbout .box 
+{
+    width: 180px;
+    height: 180px;
+    margin: auto ;
+}
+.aboutCafe .containerAbout .box img 
+{
+    width: 100%;
+    border-radius: 20px ;
+}
+.owl-nav
+{
+    text-align: center;
+    margin: 5px auto;
+}
+.owl-prev,.owl-next
+{
+    width: 20px;
+    /* background: #808080 !important; */
+    margin: 0 6px;
+    outline: none;
+}
+/* ví trí của nút next và prev */
+.owl-prev
+{
+    position: absolute;
+    left: -30px;
+    top: 35%;
+}
+.owl-next
+{
+    position: absolute;
+    right: -30px;
+    top: 35%;
+}
+.owl-prev:hover span ,.owl-next:hover span
+{
+    color: teal;
+}
+.owl-prev span ,.owl-next span
+{
+    font-size: 25px;
+    color: white;
+    transition: .3s linear;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 5px;
+    }
+
+.owl-dot{
+    width: 10px;
+    height: 10px;
+    background: #808080 !important;
+    margin: 0 6px;
+    border-radius: 14px;
+    outline: none;
+    transition: .3s linear;
+    }
+
+.owl-dot.active{
+    width: 30px;
+    background: #6ab04c !important;
+    outline: none;
+    }
+
+.owl-dot:hover{
+    width: 36px;
+    background: #6ab04c !important;
+    }
+
+.aboutCafe .containerAbout .icon 
+{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.aboutCafe .containerAbout i 
+{   
+    padding: 20px;
+    font-size: 20px;
+    align-items: center;
+    background-color: tomato;
+    border-radius: 4px;
+    color: white;
+}
+.aboutCafe .containerAbout h2 
+{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.aboutCafe .containerAbout .link
+{
+    /* font-size: 14px; */
+    color: white;
+}
+/* about end------------------------------------------------------------------- */
+
+@media (max-width:1200px)
+{
+    
+}
+@media (max-width:769px)
+{
+    /* menu */
+    .containerHead .contact
+    {
+        display: none;
+    }
+    .navHiden 
+    {
+        display: flex;
+    }
+    .menuBar
+    {
+        flex-direction: column;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        width: 50%;
+        z-index: 1000;
+        background: linear-gradient(180deg,rgba(37, 81, 131, 0.9),rgba(24, 84, 51, 0.9));
+    }
+    .menuBar .logo 
+    {
+        display: none;
+    }
+    #menuHiden:checked ~ .menuBar
+    {
+        left: 0;
+    }
+    
+    .menuBtn 
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu
+    {
+        flex-direction: column;
+    }
+    .menu a 
+    {
+        margin: 10px 0;
+    }
+    /* menu end*/
+
+    /* Home and Daily Deal */
+    .home .containerHome
+    {
+        flex-direction: column-reverse;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .home .containerHome .imgBox img 
+    {
+        width: 140px;
+        height: 140px;
+        margin-top: 80px;
+    }
+
+    .home .containerHome .contentHome
+    {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .dailyDeal .containerDeal .icon 
+    {
+       flex-direction: column;
+    }
+    .dailyDeal .containerDeal .content .imgBox 
+    {
+        margin: 20px 5px;
+    }
+    .containerDeal h1 
+    {
+        margin-bottom: 10px;
+    }
+    .dailyDeal .containerDeal p 
+    {
+        width: 90%;
+        text-align: center;
+    }
+    /* End Home and Daily Deal */
+    /* About */
+    .aboutCafe .containerAbout p
+    {
+        width: 90%;
+        text-align: center;
+    }
+    .aboutCafe .containerAbout .link 
+    {
+        margin: 0 10px;
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    /* End About */
+}
