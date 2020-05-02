@@ -19,15 +19,19 @@ header
 }
 a 
 {
-    text-decoration: none;
+    text-decoration: none; 
 }
 h1 
 {
     font-size: 26px;
 }
+p{
+    font-size: 17px;
+    /* width: 80%; */
+}
 .container
 {
-    width: 1200px;
+    width: 1100px;
     margin: 0 auto;
     padding: 20px 10px;
 }
@@ -230,7 +234,7 @@ h1
 {
     font-family: 'Lobster', cursive;
     color: rgba(255, 255, 255, 0.85);
-    margin: 0 12px;
+    margin: 0 8px;
     padding: 0 7px;
     text-transform: uppercase;
     line-height: 50px;
@@ -337,7 +341,7 @@ h1
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(35deg,wheat,rgb(238, 240, 113));
+    background: linear-gradient(90deg,rgb(174, 223, 77),rgb(238, 240, 113));
 }
 .containerDeal h1 
 {   
@@ -629,11 +633,276 @@ h1
     color: white;
 }
 /* about end------------------------------------------------------------------- */
-
-@media (max-width:1200px)
+/* Our menu ----------------------------------------------------------- */
+.ourMenu
 {
-    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(90deg,rgb(238, 240, 113),rgb(174, 223, 77));
 }
+.ourMenu h1 
+{   
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: tomato;
+    word-spacing: 5px;
+}
+.ourMenu h1::before
+{
+    content: '';
+    top: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    background-color: tomato;
+}
+.ourMenu h1::after
+{
+    content: '';
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -20px;
+    position: absolute;
+    width: 50px;
+    border-bottom: 10px dotted teal; 
+}
+.ourMenu .containerOurmenu p 
+{
+    font-size: 18px;
+    width: 80%;
+    margin: 30px auto 0;
+}
+.ourMenu .contentBox
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.ourMenu .contentBox .box 
+{
+    margin: 15px 0;
+}
+.ourMenu  .contentBox .imgBox
+{
+    width: 180px;
+    height: 70px;
+}
+.ourMenu  .contentBox .imgBox img 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.ourMenu .contentBox .box h2
+{
+    margin: 10px 0 2px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: rgb(24, 88, 141);
+}
+.ourMenu  .contentBox .box p
+{
+    font-size: 15px;
+}
+
+/* portfolio */
+/* .portfolioMenu 
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(90deg,rgb(238, 240, 113),rgb(174, 223, 77));
+} */
+/* .portfolioMenu  h1 
+{   
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: tomato;
+    word-spacing: 5px;
+}
+.portfolioMenu  h1::before
+{
+    content: '';
+    top: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    background-color: tomato;
+}
+.portfolioMenu  h1::after
+{
+    content: '';
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -20px;
+    position: absolute;
+    width: 50px;
+    border-bottom: 10px dotted teal; 
+} */
+/* Our menu end----------------------------------------------------------- */
+/* Event ---------------------------------------------------------------------- */
+.event
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(IMG/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.event  h1 
+{   
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: sandybrown;
+    word-spacing: 5px;
+    margin: 20px 0;
+}
+.event  h1::before
+{
+    content: '';
+    top: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    background-color: sandybrown;
+}
+.event  h1::after
+{
+    content: '';
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -20px;
+    position: absolute;
+    width: 50px;
+    border-bottom: 10px dotted teal; 
+} 
+.event .contentBox
+{
+    margin: 50px auto;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.event .contentBox  input[type='radio']
+{
+    visibility: hidden;
+    display: none;
+}
+.event .contentBox .boxLeft
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+.event .contentBox .boxLeft label 
+{
+    padding: 10px 15px;
+    background-color: sandybrown;
+    margin: 10px 0;
+    text-align: left;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-family: 'Lobster', cursive;
+    word-spacing: 4px;
+    transition: .5s;
+    cursor: pointer;
+}
+.event .contentBox .boxLeft label:hover 
+{
+    background-color: rgb(129, 39, 23);
+    color: white;
+}
+.event .contentBox .boxLeft label.activeLabel
+{
+    background-color: rgb(129, 39, 23);
+    color: white;
+}
+/* Right---------------------------------------------------------------------- */
+.event .contentBox .boxRight 
+{
+    flex: 1.2;
+}
+.event .contentBox .boxRight .content 
+{
+    margin: 10px 0;
+    bottom: -100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+.event .contentBox .boxRight .imgBox
+{
+    overflow: hidden;
+    max-width: 450px;
+    border-radius: 5px;
+    height: 115px;
+    margin:10px auto;
+}
+.event .contentBox .boxRight img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: .5s;
+}
+.event .contentBox .boxRight img:hover 
+{
+    transform: scale(1.1) ;
+}
+.event .contentBox .boxRight h2 
+{
+    text-transform: uppercase;
+    color: sandybrown;
+    margin: 10px 0 5px;
+}
+.event .contentBox .boxRight p 
+{
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+/* radio check */
+.event .contentBox .boxRight input[type="radio"]:checked + .content
+{
+    /* top : 0; */
+    position: relative;
+}
+
+
+/* Event end---------------------------------------------------------------------- */
 @media (max-width:769px)
 {
     /* menu */
@@ -734,4 +1003,22 @@ h1
     }
 
     /* End About */
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /* event */
+    .event .contentBox
+    {
+        flex-direction:column-reverse ;
+    }
+    .event .contentBox .boxLeft 
+    {
+        margin-right: 0;
+    }
+    /* event end */
 }
+=======
+}
+>>>>>>> 2b3417f74f3eaa27c4de703466dbc3b5b3b29dce
+=======
+}
+>>>>>>> 2b3417f74f3eaa27c4de703466dbc3b5b3b29dce
