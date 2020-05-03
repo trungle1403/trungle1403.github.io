@@ -19,7 +19,7 @@ header
 }
 a 
 {
-    text-decoration: none; 
+    text-decoration: none;
 }
 h1 
 {
@@ -845,11 +845,13 @@ p{
     background-color: rgb(129, 39, 23);
     color: white;
 }
-.event .contentBox .boxLeft label.activeLabel
+
+.event .contentBox .boxLeft label.openBg
 {
     background-color: rgb(129, 39, 23);
     color: white;
 }
+
 /* Right---------------------------------------------------------------------- */
 .event .contentBox .boxRight 
 {
@@ -1003,7 +1005,6 @@ p{
     }
 
     /* End About */
-
     /* event */
     .event .contentBox
     {
@@ -1015,4 +1016,3 @@ p{
     }
     /* event end */
 }
-

@@ -49,3 +49,65 @@ window.addEventListener("scroll",function(){
     lastScrollTop =scrollTop;
 })
 // scroll menu sticky end
+
+// checked event
+const label1 = document.getElementById('label1');
+const label2 = document.getElementById('label2');
+const label3 = document.getElementById('label3');
+const label4 = document.getElementById('label4');
+label1.classList.add('openBg');
+label1.addEventListener('click', () => {
+    let bg = false;
+    label2.classList.remove('openBg');
+    label3.classList.remove('openBg');
+    label4.classList.remove('openBg');
+    if (!bg){
+        label1.classList.add('openBg');
+        bg = true;
+    } else 
+    {
+        bg = false;
+    }
+});
+
+label2.addEventListener('click', () => {
+    let bg = false;
+    label1.classList.remove('openBg');
+    label3.classList.remove('openBg');
+    label4.classList.remove('openBg');
+    if (!bg){
+        label2.classList.add('openBg');
+        bg = true;
+    } else 
+    {
+        bg = false;
+    }
+});
+
+label3.addEventListener('click', () => {
+    let bg = false;
+    label1.classList.remove('openBg');
+    label2.classList.remove('openBg');
+    label4.classList.remove('openBg');
+    if (!bg){
+        label3.classList.add('openBg');
+        bg = true;
+    } else 
+    {
+        bg = false;
+    }
+});
+
+label4.addEventListener('click', () => {
+    let bg = false;
+    label1.classList.remove('openBg');
+    label2.classList.remove('openBg');
+    label3.classList.remove('openBg');
+    if (!bg){
+        label4.classList.add('openBg');
+        bg = true;
+    } else 
+    {
+        bg = false;
+    }
+});
