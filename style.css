@@ -140,6 +140,55 @@ p{
     filter: blur(20px);
 }
 /* scroll bar end------------------------ */
+/* back to top */
+.backtoTop 
+{
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+}
+.backtoTop a
+{
+    transition: .5s;
+    display: block;
+    padding: 7px 10px;
+    position: relative;
+    /* border: 2px solid; */
+}
+.backtoTop a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 5px;
+    height: 15px;
+    transform: rotate(45deg);
+    transition: .5s;
+    background-color: teal;
+}
+.backtoTop a::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 5px;
+    height: 15px;
+    transform: rotate(-45deg);
+    transition: .5s;
+    background-color: teal;
+}
+.backtoTop a:hover::before
+{
+    transform: rotate(-135deg);
+}
+.backtoTop a:hover::after
+{
+    transform: rotate(135deg);
+}
+/* back to top end */
+
 /* Menu------------------------------------------------------------- */
 
 .containerHead .contact
@@ -361,7 +410,6 @@ p{
     border-radius:100px;
     width: 200px;
     height: 200px;
-
 }
 .home .containerHome .contentHome
 {
@@ -918,7 +966,25 @@ p{
     background-color: rgb(129, 39, 23);
     color: white;
 }
+.event .contentBox .boxLeft .box 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.event .contentBox .boxLeft a
+{
+    color: white;
+    padding: 5px;
+    background-color: teal;
+    border: 2px solid teal;
+    font-size: 13px;
+    transition: .5s;
+}
+.event .contentBox .boxLeft a:hover 
+{
+    background: transparent;
 
+}
 /* Right---------------------------------------------------------------------- */
 .event .contentBox .boxRight 
 {
@@ -936,7 +1002,7 @@ p{
     overflow: hidden;
     max-width: 450px;
     border-radius: 5px;
-    height: 115px;
+    height: 8.2rem;
     margin:10px auto;
 }
 .event .contentBox .boxRight img 
@@ -960,8 +1026,11 @@ p{
 .event .contentBox .boxRight p 
 {
     color: white;
-    width: 80%;
+    width: 90%;
     margin: auto;
+    padding: 5px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+
 }
 /* radio check */
 .event .contentBox .boxRight input[type="radio"]:checked + .content
