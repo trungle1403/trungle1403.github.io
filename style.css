@@ -190,7 +190,6 @@ p{
 /* back to top end */
 
 /* Menu------------------------------------------------------------- */
-
 .containerHead .contact
 {
     display: flex;
@@ -359,7 +358,7 @@ p{
 {
     color:#45aaf2;
 }
-
+ 
 .menu a:hover
 {
     color: #45aaf2;
@@ -442,7 +441,6 @@ p{
     position: relative;
     display: block;
 } */
-
 
 /* Home End------------------------------------------------------------- */
 
