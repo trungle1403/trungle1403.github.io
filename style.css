@@ -7,7 +7,11 @@
     /* font-family: 'Dancing Script', cursive; */
     /* font-family: 'Lobster', cursive; */
 }
-
+body 
+{
+    margin-right: 7px;
+    /* khoảng cách của scroll bar  */
+}
 header
 {
     background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(IMG/bg.jpeg);
@@ -75,6 +79,67 @@ p{
     transform: scaleX(0);
 
 } 
+/* scroll bar */
+::-webkit-scrollbar
+{
+    width: 0px;
+}
+.scrollPath 
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    background: rgba(255, 255, 255, .05);
+    z-index: 10000;
+}
+.progressBar 
+{
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    margin-left: 6px;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animateScroll 5s linear infinite;
+}
+@keyframes animateScroll
+{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+.progressBar::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top , #008aff,#00ffe7);
+    filter: blur(10px);
+}
+.progressBar::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top , #008aff,#00ffe7);
+    filter: blur(20px);
+}
+/* scroll bar end------------------------ */
 /* Menu------------------------------------------------------------- */
 
 .containerHead .contact
@@ -425,6 +490,7 @@ p{
     border-radius: 10px;
     overflow: hidden;
     margin: 40px 20px 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 1, .5);
 }
 .dailyDeal .containerDeal .content .imgBox img
 {
@@ -702,6 +768,7 @@ p{
     width: 100%;
     height: 100%;
     border-radius: 15px;
+    /* box-shadow: 0px 5px 15px rgba(0, 0, 1, .5); */
     object-fit: cover;
 }
 .ourMenu .contentBox .box h2

@@ -111,3 +111,14 @@ label4.addEventListener('click', () => {
         bg = false;
     }
 });
+// check event end
+
+// scroll bar
+// let progress = document.getRootNode(scrollbars);
+let progress = document.querySelector('.progressBar');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function(){
+    let progressHeight = (window.pageYOffset / totalHeight)*100;
+    progress.style.height = progressHeight + "%";
+}
+// scroll bar end
