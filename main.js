@@ -25,8 +25,6 @@ menubtn.addEventListener('click', () => {
     //     }
     // })
 
-
-
 // hambuger menu end
 
 // scroll menu sticky 
