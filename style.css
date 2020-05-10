@@ -455,7 +455,7 @@ p{
     display: flex;
     align-items: center;
     /* background: linear-gradient(90deg,rgb(174, 223, 77),rgb(238, 240, 113)); */
-    background: #151412;
+    background: #181712;
 }
 .containerDeal h1 
 {   
@@ -756,7 +756,7 @@ p{
     display: flex;
     align-items: center;
     text-align: center;
-    background: #151412;
+    background: #181712;
 }
 .ourMenu h1 
 {   
@@ -1053,7 +1053,7 @@ p{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #151414;
+    background: #151712;
 }
 .blog  h1 
 {   
@@ -1119,6 +1119,7 @@ p{
 {
     width: 200px;
     text-align: left;
+    margin-left: 20px;
 }
 
 .blog .containerBlog  .contentLeft .box .imgBox
@@ -1414,5 +1415,12 @@ p{
         margin: auto;
         padding-top: 10px;
     }
-    
+    .blog .containerBlog .contentLeft .box .content 
+    {
+        margin-left: 0;
+    }
+    .blog .contentLeft .box .content p
+    {
+        text-align: center;
+    }
 }
