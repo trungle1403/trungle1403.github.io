@@ -1110,7 +1110,7 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 430px; 
+    max-width: 430px; 
     /* -------------------------------------------------------------------------- mỗi phần 200px dư 30px */
     overflow: hidden;
     margin: 10px;
@@ -1414,4 +1414,5 @@ p{
         margin: auto;
         padding-top: 10px;
     }
+    
 }
