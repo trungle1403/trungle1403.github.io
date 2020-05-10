@@ -455,7 +455,7 @@ p{
     display: flex;
     align-items: center;
     /* background: linear-gradient(90deg,rgb(174, 223, 77),rgb(238, 240, 113)); */
-    background: #151612;
+    background: #151412;
 }
 .containerDeal h1 
 {   
@@ -756,7 +756,7 @@ p{
     display: flex;
     align-items: center;
     text-align: center;
-    background: #151612;
+    background: #191912;
 }
 .ourMenu h1 
 {   
@@ -1053,7 +1053,7 @@ p{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #151612;
+    background: #151412;
 }
 .blog  h1 
 {   
