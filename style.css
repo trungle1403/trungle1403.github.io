@@ -455,7 +455,7 @@ p{
     display: flex;
     align-items: center;
     /* background: linear-gradient(90deg,rgb(174, 223, 77),rgb(238, 240, 113)); */
-    background: #151412;
+    background: #191812;
 }
 .containerDeal h1 
 {   
@@ -580,7 +580,7 @@ p{
 /* about------------------------------------------------------------------- */
 .aboutCafe
 {
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(IMG/bg1.jpeg) ;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(IMG/bg1.jpeg) ;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -756,7 +756,7 @@ p{
     display: flex;
     align-items: center;
     text-align: center;
-    background: #191912;
+    background: #191712;
 }
 .ourMenu h1 
 {   
@@ -884,7 +884,7 @@ p{
     display: flex;
     align-items: center;
     text-align: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(IMG/bg.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(IMG/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1154,7 +1154,8 @@ p{
     color: #c6a07a;
     text-transform: uppercase;
     display: flex;
-    margin: 10px 0;
+    margin: 14px 0;
+    padding-right: 5px;
     align-items: center;
     font-weight: 900;
 }
@@ -1165,7 +1166,7 @@ p{
 .blog  .contentLeft .box .btMore img 
 {
     width: 25px;
-    height: 20px;
+    height: 17px;
     margin-left: 5px;
     transition: .3s linear;  
     object-fit: cover;  
@@ -1236,7 +1237,7 @@ p{
     }
     .blog .contentBlog .contentRight 
     {
-        margin: 30px auto;
+        margin: 30px auto 10px;
         width: 100%;
         border: none;
     }
@@ -1378,10 +1379,7 @@ p{
     {
         flex-direction: column;
     }
-    .blog .contentRight .containerBox 
-    {
-       flex-direction: column;
-    }
+    
     .blog .contentRight .containerBox  .box 
     {
         flex-direction: column;
